@@ -21,7 +21,9 @@ pd_structure_smile <- read.SDFset("D:/Structure2D_CID_20393.sdf")
 plot(pd_structure_smile, atomnum = TRUE ,no_print_atoms = "",atomcex=0.7, print=FALSE)
 
 mat_raw_charge <- "CHARGE=1-"
-
+         
+parent_mz <-round(as.numeric(meta_cand_list[1,2]),4)
+         
 mat_raw_ms1_mz <- matrix(nrow = mat_list_da_num ,ncol = 1000)
 mat_raw_ms1_int <- matrix(nrow = mat_list_da_num ,ncol = 1000)
 mat_raw_ms2_mz <- matrix(nrow = mat_list_da_num ,ncol = 1000)
@@ -169,7 +171,7 @@ for(cc in c(1:10)){
       }else{
         reaction_posit <- which(meta_comb_list_f[,2] == paste(na.omit(reaction_type_table_1[ds,]),collapse="+"))
       }
-      reaction_mz_vzlue <- round(as.numeric(meta_comb_list_f[reaction_posit,3]),4)-as.numeric(mat_raw_ms1_mz[1,1])
+      reaction_mz_vzlue <- round(as.numeric(meta_comb_list_f[reaction_posit,3]),4)-parent_mz
       for(dd in c(1:length(fragment_list))){
         mat_pd_structure_ass[dd,ds+1] <- round(as.numeric(mat_pd_structure_ass[dd,1]),4)+ reaction_mz_vzlue
       }
