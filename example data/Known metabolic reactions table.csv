@@ -1,0 +1,21 @@
+name of modification,mass change (u),phase
+hydroxylation,15.99491,1
+deoxidation,-15.99491,1
+carbonyl loss,-27.99491,1
+carboxylic acid,29.9742,1
+ketone,13.9793,1
+oxidative deamination,0.98402,1
+defluorinationa,-20.00623,1
+dechlorinationa,-35.97668,1
+debrominationa,-79.92616,1
+dephenylation,-76.0313,1
+demethylation,-14.01565,1
+methylation,14.01565,1
+acetylation,42.01056,1
+reduction,2.01565,1
+hydration,18.01056,1
+dehydration,-18.01056,1
+decarboxylation,-43.98983,1
+oxidation of the CC bond,-2.01565,1
+glucuronidation,176.03209,2
+sulfation,79.95681,2
